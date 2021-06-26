@@ -481,6 +481,45 @@ Transform:
   m_Father: {fileID: 617329186}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &24966695
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 24966696}
+  m_Layer: 0
+  m_Name: Players
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &24966696
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24966695}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 8.88, z: -7.95}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2929935410035347659}
+  - {fileID: 845661151}
+  - {fileID: 1833861793}
+  - {fileID: 1576804044}
+  - {fileID: 425379324}
+  - {fileID: 1984189968}
+  - {fileID: 467483613}
+  - {fileID: 2070408048}
+  - {fileID: 472836075}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &26189083
 GameObject:
   m_ObjectHideFlags: 0
@@ -1599,7 +1638,7 @@ RectTransform:
   m_Children:
   - {fileID: 165926484}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1801,7 +1840,7 @@ GameObject:
   - component: {fileID: 165926486}
   - component: {fileID: 165926485}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ZoneOfTouch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1823,8 +1862,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000076294, y: -625}
-  m_SizeDelta: {x: 966.3, y: 594.8}
+  m_AnchoredPosition: {x: -0.000024796, y: -617}
+  m_SizeDelta: {x: 991.5, y: 610.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &165926485
 MonoBehaviour:
@@ -1840,7 +1879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4963,6 +5002,59 @@ Transform:
   m_Father: {fileID: 1893797755}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &356281647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 356281649}
+  - component: {fileID: 356281648}
+  m_Layer: 0
+  m_Name: Relocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &356281648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356281647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3de20f1c3d253240847ebe4564907a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RelocationCam: {fileID: 456644552}
+  Brush: {fileID: 3606771012729896235, guid: 0f8a59fdac4e8b54dbb40b9a038cdde4, type: 3}
+  distanceFromCamOfBrush: 22.6
+  RunnerPositionY: 0.7
+  brushlimitsHorizontal:
+  - 105
+  - 975
+  brushlimitsVertical:
+  - 105
+  - 580
+--- !u!4 &356281649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356281647}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &360120957
 GameObject:
   m_ObjectHideFlags: 0
@@ -6016,7 +6108,7 @@ GameObject:
   - component: {fileID: 425379323}
   m_Layer: 0
   m_Name: FallGuys_01 (4)
-  m_TagString: Untagged
+  m_TagString: Runner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6048,13 +6140,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 425379322}
   m_LocalRotation: {x: -0, y: 0.007195386, z: -0, w: -0.99997413}
-  m_LocalPosition: {x: -0.04, y: 0.42, z: 4.45}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalPosition: {x: -0.04, y: -8.46, z: 12.4}
+  m_LocalScale: {x: 0.60000014, y: 0.6, z: 0.60000014}
   m_Children:
   - {fileID: 3464466}
   - {fileID: 931430850}
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 24966696}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 359.175, z: 0}
 --- !u!1 &430362137
 GameObject:
@@ -6672,6 +6764,80 @@ Transform:
   m_Father: {fileID: 585800458}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &456644550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 456644553}
+  - component: {fileID: 456644552}
+  m_Layer: 0
+  m_Name: RelocationCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!20 &456644552
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456644550}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 26.991467
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 1
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &456644553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456644550}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.03, y: 23.1, z: 7.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &462544219
 GameObject:
   m_ObjectHideFlags: 0
@@ -6931,7 +7097,7 @@ GameObject:
   - component: {fileID: 467483612}
   m_Layer: 0
   m_Name: FallGuys_01 (6)
-  m_TagString: Untagged
+  m_TagString: Runner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6963,13 +7129,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467483611}
   m_LocalRotation: {x: -0, y: 0.007195386, z: -0, w: -0.99997413}
-  m_LocalPosition: {x: 1.1, y: 0.42, z: 4.45}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalPosition: {x: 1.1, y: -8.46, z: 12.4}
+  m_LocalScale: {x: 0.60000014, y: 0.6, z: 0.60000014}
   m_Children:
   - {fileID: 1742068443}
   - {fileID: 670784948}
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 24966696}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 359.175, z: 0}
 --- !u!1 &472836073
 GameObject:
@@ -6983,7 +7149,7 @@ GameObject:
   - component: {fileID: 472836074}
   m_Layer: 0
   m_Name: FallGuys_01 (8)
-  m_TagString: Untagged
+  m_TagString: Runner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7015,13 +7181,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472836073}
   m_LocalRotation: {x: -0, y: 0.007195386, z: -0, w: -0.99997413}
-  m_LocalPosition: {x: 2.25, y: 0.42, z: 4.45}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalPosition: {x: 2.25, y: -8.46, z: 12.4}
+  m_LocalScale: {x: 0.60000014, y: 0.6, z: 0.60000014}
   m_Children:
   - {fileID: 383304680}
   - {fileID: 1743693564}
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_Father: {fileID: 24966696}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 359.175, z: 0}
 --- !u!1 &475083405
 GameObject:
@@ -10978,7 +11144,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &727949278
 GameObject:
@@ -12324,7 +12490,7 @@ GameObject:
   - component: {fileID: 845661150}
   m_Layer: 0
   m_Name: FallGuys_01 (1)
-  m_TagString: Untagged
+  m_TagString: Runner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12356,13 +12522,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845661149}
   m_LocalRotation: {x: -0, y: 0.007195386, z: -0, w: -0.99997413}
-  m_LocalPosition: {x: -1.71, y: 0.42, z: 4.45}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalPosition: {x: -1.71, y: -8.46, z: 12.4}
+  m_LocalScale: {x: 0.60000014, y: 0.6, z: 0.60000014}
   m_Children:
   - {fileID: 223399270}
   - {fileID: 1495213782}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 24966696}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 359.175, z: 0}
 --- !u!1 &847581425
 GameObject:
@@ -13993,13 +14159,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.21637224, y: -0, z: -0, w: 0.97631097}
+  m_LocalRotation: {x: 0.23917772, y: -0, z: -0, w: 0.9709759}
   m_LocalPosition: {x: 0, y: 8.88, z: -7.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 24.992, y: 0, z: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 27.676, y: 0, z: 0}
 --- !u!1 &965303959
 GameObject:
   m_ObjectHideFlags: 0
@@ -21778,6 +21944,59 @@ Transform:
   m_Father: {fileID: 1431259836}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1488226845
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1488226847}
+  - component: {fileID: 1488226846}
+  m_Layer: 0
+  m_Name: Draw
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1488226846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488226845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f07326bae77dac40aca758fca52fa2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainCam: {fileID: 963194227}
+  Brush: {fileID: 5948586509291601166, guid: 17488b58ac3ba994aac878eaf8b26b75, type: 3}
+  distanceFromCamOfBrush: 6
+  brushlimitsHorizontal:
+  - 105
+  - 975
+  brushlimitsVertical:
+  - 105
+  - 580
+  relocation: {fileID: 0}
+--- !u!4 &1488226847
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488226845}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1490447117
 GameObject:
   m_ObjectHideFlags: 0
@@ -22854,7 +23073,7 @@ GameObject:
   - component: {fileID: 1576804043}
   m_Layer: 0
   m_Name: FallGuys_01 (3)
-  m_TagString: Untagged
+  m_TagString: Runner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22886,13 +23105,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576804042}
   m_LocalRotation: {x: -0, y: 0.007195386, z: -0, w: -0.99997413}
-  m_LocalPosition: {x: -0.63, y: 0.42, z: 4.45}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalPosition: {x: -0.63, y: -8.46, z: 12.4}
+  m_LocalScale: {x: 0.60000014, y: 0.6, z: 0.60000014}
   m_Children:
   - {fileID: 1292277355}
   - {fileID: 886048129}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 24966696}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 359.175, z: 0}
 --- !u!1 &1577541050
 GameObject:
@@ -27472,7 +27691,7 @@ GameObject:
   - component: {fileID: 1833861792}
   m_Layer: 0
   m_Name: FallGuys_01 (2)
-  m_TagString: Untagged
+  m_TagString: Runner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27504,13 +27723,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833861791}
   m_LocalRotation: {x: -0, y: 0.007195386, z: -0, w: -0.99997413}
-  m_LocalPosition: {x: -1.1899999, y: 0.42, z: 4.45}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalPosition: {x: -1.1899999, y: -8.46, z: 12.4}
+  m_LocalScale: {x: 0.60000014, y: 0.6, z: 0.60000014}
   m_Children:
   - {fileID: 2048574490}
   - {fileID: 1461901515}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 24966696}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 359.175, z: 0}
 --- !u!1 &1835704125
 GameObject:
@@ -29850,7 +30069,7 @@ GameObject:
   - component: {fileID: 1984189967}
   m_Layer: 0
   m_Name: FallGuys_01 (5)
-  m_TagString: Untagged
+  m_TagString: Runner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29882,13 +30101,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984189966}
   m_LocalRotation: {x: -0, y: 0.007195386, z: -0, w: -0.99997413}
-  m_LocalPosition: {x: 0.5799999, y: 0.42, z: 4.45}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalPosition: {x: 0.5799999, y: -8.46, z: 12.4}
+  m_LocalScale: {x: 0.60000014, y: 0.6, z: 0.60000014}
   m_Children:
   - {fileID: 1759426343}
   - {fileID: 187775203}
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 24966696}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 359.175, z: 0}
 --- !u!1 &1984993222
 GameObject:
@@ -30760,6 +30979,97 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043016288}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2044397639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2044397640}
+  - component: {fileID: 2044397641}
+  m_Layer: 0
+  m_Name: DirectionalLightToPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2044397640
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044397639}
+  m_LocalRotation: {x: 0.3830306, y: 0.004735542, z: -0.09552651, w: 0.91877085}
+  m_LocalPosition: {x: 10.150252, y: 10.939908, z: -3.8389268}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2060731032}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 44.808002, y: -725.214, z: -14.023001}
+--- !u!108 &2044397641
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044397639}
+  m_Enabled: 1
+  serializedVersion: 9
+  m_Type: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.1
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4097
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 1
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 5.38e-43, y: 0, z: 1, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &2044699182
 GameObject:
   m_ObjectHideFlags: 0
@@ -31240,8 +31550,9 @@ Transform:
   - {fileID: 254625468}
   - {fileID: 1311604798}
   - {fileID: 2087428663}
+  - {fileID: 2044397640}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2064800247
 GameObject:
@@ -31473,7 +31784,7 @@ GameObject:
   - component: {fileID: 2070408047}
   m_Layer: 0
   m_Name: FallGuys_01 (7)
-  m_TagString: Untagged
+  m_TagString: Runner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31505,13 +31816,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070408046}
   m_LocalRotation: {x: -0, y: 0.007195386, z: -0, w: -0.99997413}
-  m_LocalPosition: {x: 1.66, y: 0.42, z: 4.45}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalPosition: {x: 1.66, y: -8.46, z: 12.4}
+  m_LocalScale: {x: 0.60000014, y: 0.6, z: 0.60000014}
   m_Children:
   - {fileID: 1725990172}
   - {fileID: 1228151119}
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 24966696}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 359.175, z: 0}
 --- !u!1 &2072640343
 GameObject:
@@ -31928,7 +32239,7 @@ GameObject:
   - component: {fileID: 2087428663}
   - component: {fileID: 2087428664}
   m_Layer: 0
-  m_Name: DirectionalLightToPlayer
+  m_Name: DirectionalLightToOcean
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31996,7 +32307,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 1
   m_RenderingLayerMask: 1
   m_Lightmapping: 1
   m_LightShadowCasterMode: 0
@@ -32875,7 +33186,7 @@ Transform:
   - {fileID: 590702824}
   - {fileID: 199874864}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &219251436023238531
 Transform:
@@ -33483,7 +33794,7 @@ GameObject:
   - component: {fileID: 5053948605500128689}
   m_Layer: 0
   m_Name: FallGuys_01
-  m_TagString: Untagged
+  m_TagString: Runner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33648,13 +33959,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2229951845720662744}
   m_LocalRotation: {x: -0, y: 0.007195386, z: -0, w: -0.99997413}
-  m_LocalPosition: {x: -2.21, y: 0.42, z: 4.45}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalPosition: {x: -2.21, y: -8.46, z: 12.4}
+  m_LocalScale: {x: 0.60000014, y: 0.6, z: 0.60000014}
   m_Children:
   - {fileID: 8212091968899249898}
   - {fileID: 9208418972207435440}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 24966696}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 359.175, z: 0}
 --- !u!4 &2971207925132448386
 Transform:
@@ -33795,7 +34106,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &3305285326658666809
 Transform:

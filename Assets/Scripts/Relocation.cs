@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System;
 
-public class Drawing : MonoBehaviour
+public class Relocation : MonoBehaviour
 {
     [Header("GameObjects")]
-    public Camera MainCam;
+    public Camera RelocationCam;
     public GameObject Brush;
     private GameObject brushInstantiated;
+    private GameObject[] Runners;
 
     [Header("TouchResults")]
     private LineRenderer currentLineRenderer;
@@ -17,16 +20,9 @@ public class Drawing : MonoBehaviour
 
     [Header("ValuesCorrectable")]
     [SerializeField] private float distanceFromCamOfBrush;
+    [SerializeField] private float RunnerPositionY;
     [SerializeField] private float[] brushlimitsHorizontal = new float[2];
     [SerializeField] private float[] brushlimitsVertical = new float[2];
-
-    [Header("Connection")]
-    public Relocation relocation;
-
-    private void Awake()
-    {
-        relocation = FindObjectOfType<Relocation>();
-    }
 
     private void Update()
     {
@@ -56,12 +52,11 @@ public class Drawing : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Mouse0))
         {
-            relocation.RelocateRunners();
             //When touch/mousePos is unpressed
         }
     }
 
-    #region screenBrushControl
+    #region sceneBrushControl
     private void CreateBrush()
     {
         brushInstantiated = Instantiate(Brush);
@@ -91,7 +86,7 @@ public class Drawing : MonoBehaviour
         mousePos.z = distanceFromCamOfBrush;
         //Correction needed because of the mistake when Z axis == 0 brush just sets to cam.position
 
-        mousePosCorrected = MainCam.ScreenToWorldPoint(mousePos);
+        mousePosCorrected = RelocationCam.ScreenToWorldPoint(mousePos);
         //Set touch/mousePos from cam scale to World scale  
     }
 
@@ -112,4 +107,26 @@ public class Drawing : MonoBehaviour
         //Compare all of the touch/mousePos values to fit with limits 
     }
     #endregion
+
+    public void RelocateRunners()
+    {
+        float NumberOfVector3InArray = currentLineRenderer.positionCount;
+
+        Runners = GameObject.FindGameObjectsWithTag("Runner");
+
+        float positionsPerRunner = NumberOfVector3InArray / Runners.Length;
+
+        print(positionsPerRunner);
+
+        float summOfPositionsPerRunner = 0;
+
+        for (int i = 0; i < Runners.Length; i++)
+        {
+            Vector3 currentCoordinates = currentLineRenderer.GetPosition( (int)Math.Round( summOfPositionsPerRunner) );
+
+            summOfPositionsPerRunner += positionsPerRunner;
+
+            Runners[i].transform.position = new Vector3(currentCoordinates.x, RunnerPositionY, currentCoordinates.z);
+        }
+    }
 }
