@@ -65,6 +65,8 @@ public class Drawing : MonoBehaviour
     private void CreateBrush()
     {
         brushInstantiated = Instantiate(Brush);
+        //Set as a child to this gameObject to not stop on the instantiated place 
+
         currentLineRenderer = brushInstantiated.GetComponent<LineRenderer>();
         //To instantiate Brush and get LineRenderer from it
 

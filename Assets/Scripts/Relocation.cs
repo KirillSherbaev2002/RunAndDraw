@@ -9,6 +9,10 @@ public class Relocation : MonoBehaviour
     public GameObject Brush;
     private GameObject brushInstantiated;
     private GameObject[] Runners;
+    public GameObject TextToMakeLineLonger;
+
+    public GameObject GameOverCanvas;
+    public GameObject GameCanvas;
 
     [Header("TouchResults")]
     private LineRenderer currentLineRenderer;
@@ -27,6 +31,7 @@ public class Relocation : MonoBehaviour
     private void Update()
     {
         Draw();
+        CheckOnGameOver();
     }
     private void Draw()
     {
@@ -119,6 +124,8 @@ public class Relocation : MonoBehaviour
         if (NumberOfVector3InArray > Runners.Length)
         //If there was more Vector3's than players make a relocation
         {
+            TextToMakeLineLonger.SetActive(false); 
+            //Notification to make line more curve deactivated
 
             float positionsPerRunner = NumberOfVector3InArray / Runners.Length;
             //Frequency of Vector3's per runner helps (if there is more than one Vector3 per player) set a distance between 
@@ -138,6 +145,21 @@ public class Relocation : MonoBehaviour
                 Runners[i].transform.position = new Vector3(currentCoordinates.x, RunnerPositionY, currentCoordinates.z);
                 //Set the transform.position for runners using x,z from array and y from the inspector 
             }
+        }
+        else
+        {
+            TextToMakeLineLonger.SetActive(true);
+            //Notification to make line more curve activated
+        }
+    }
+
+    private void CheckOnGameOver()
+    {
+        Runners = GameObject.FindGameObjectsWithTag("Runner");
+        if (Runners.Length == 0)
+        {
+            GameCanvas.SetActive(false);
+            GameOverCanvas.SetActive(true);
         }
     }
 }

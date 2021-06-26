@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Runner
+  - Obsticle
+  - FxTemporaire
+  - YouWon
+  - Gem
   layers:
   - Default
   - TransparentFX
@@ -19,7 +23,7 @@ TagManager:
   - BorderRight
   - BorderLeft
   - Player
-  - 
+  - Finish
   - 
   - 
   - 
