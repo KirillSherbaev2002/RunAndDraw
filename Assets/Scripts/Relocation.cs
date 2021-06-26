@@ -111,22 +111,33 @@ public class Relocation : MonoBehaviour
     public void RelocateRunners()
     {
         float NumberOfVector3InArray = currentLineRenderer.positionCount;
+        //Total number of Vector3's need to make a choice between them
 
         Runners = GameObject.FindGameObjectsWithTag("Runner");
+        //Find all runners on the scene
 
-        float positionsPerRunner = NumberOfVector3InArray / Runners.Length;
-
-        print(positionsPerRunner);
-
-        float summOfPositionsPerRunner = 0;
-
-        for (int i = 0; i < Runners.Length; i++)
+        if (NumberOfVector3InArray > Runners.Length)
+        //If there was more Vector3's than players make a relocation
         {
-            Vector3 currentCoordinates = currentLineRenderer.GetPosition( (int)Math.Round( summOfPositionsPerRunner) );
 
-            summOfPositionsPerRunner += positionsPerRunner;
+            float positionsPerRunner = NumberOfVector3InArray / Runners.Length;
+            //Frequency of Vector3's per runner helps (if there is more than one Vector3 per player) set a distance between 
 
-            Runners[i].transform.position = new Vector3(currentCoordinates.x, RunnerPositionY, currentCoordinates.z);
+            float summOfPositionsPerRunner = 0;
+            //Summ of frequencies already apllied 
+
+            for (int i = 0; i < Runners.Length; i++)
+            {
+
+                Vector3 currentCoordinates = currentLineRenderer.GetPosition((int)Math.Round(summOfPositionsPerRunner));
+                //getting Vector3 using integer value - sum of the applied frequencies
+
+                summOfPositionsPerRunner += positionsPerRunner;
+                //Needed to not lose the values less than 1 between 2 respawns (not using sum 2.5 + 2.5 = 2 + 2) (using sum 2.5 + 2.5 = 5)
+
+                Runners[i].transform.position = new Vector3(currentCoordinates.x, RunnerPositionY, currentCoordinates.z);
+                //Set the transform.position for runners using x,z from array and y from the inspector 
+            }
         }
     }
 }
